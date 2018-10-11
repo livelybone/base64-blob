@@ -26,9 +26,7 @@ npm i -S base64-blob
 
 ## Usage
 ```js
-import Base64_Blob from 'base64-blob'
-
-const {base64ToBlob, blobToBase64} = Base64_Blob
+import {base64ToBlob, blobToBase64} from 'base64-blob'
 ```
 
 when you want to set this module as external while you are developing another module, you should import it like this:
