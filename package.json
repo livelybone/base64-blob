@@ -1,0 +1,42 @@
+{
+  "name": "base64-blob",
+  "version": "1.0.0",
+  "description": "A module for interconversion of base64 and blob, wrapped by Promise",
+  "main": "./lib/umd/index.js",
+  "module": "./lib/es/index.js",
+  "unpkg": "./lib/umd/index.js",
+  "scripts": {
+    "build": "rimraf ./lib && cross-env NODE_ENV=production rollup -c",
+    "eslint": "eslint ./src",
+    "test": "npm run build && mocha ./test/index.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/livelybone/base64-blob.git"
+  },
+  "keywords": [
+    "base64",
+    "blob",
+    "conversion",
+    "base64 to blob",
+    "blob to base64",
+    "dataUrl"
+  ],
+  "author": "livelybone(2631541504@qq.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/livelybone/base64-blob/issues"
+  },
+  "homepage": "https://github.com/livelybone/base64-blob#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "mocha": "^5.2.0",
+    "rollup": "^0.65.0",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^5.0.2"
+  },
+  "dependencies": {
+    "b64-to-blob": "^1.2.19"
+  }
+}
