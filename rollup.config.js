@@ -24,7 +24,7 @@ const conf = entry => ({
     format,
     name: 'index' === entry.name ? 'Base64_Blob' : `${entry.name}Base64_Blob`,
   })),
-  external: entry.external ? [''] : [],
+  external: entry.external ? ['b64-to-blob'] : [],
   plugins: [
     resolve(),
     commonjs(),
