@@ -8,8 +8,7 @@ export function base64ToBlob(base64) {
   try {
     var arr = base64.split(',')
     var mime = arr[0].match(/:(.*?);/)[1]
-    var blobStr = atob(arr[1])
-    return Promise.resolve(b64ToBlob(blobStr, mime))
+    return Promise.resolve(b64ToBlob(arr[1], mime))
   } catch (e) {
     return Promise.reject(e)
   }
