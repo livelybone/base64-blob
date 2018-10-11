@@ -7,11 +7,19 @@
   <script src="../lib/umd/index.js"></script>
 </head>
 <body>
-<div id="module"></div>
+<input type="file" accept="image/*" id="module">
+
+<img id="img" src="" alt="">
 
 <script>
 var module = document.getElementById('module')
 // do something ...
+module.addEventListener('change', function (e) {
+  Base64_Blob.blobToBase64(e.target.files[0]).then(function (str) {
+    console.log(str)
+    document.getElementById('img').src = str
+  })
+})
 </script>
 </body>
 </html>
