@@ -14,7 +14,7 @@ You may need a Promise polyfill while use old `IE` browser
 https://github.com/livelybone/base64-blob.git
 
 ## Demo
-http://livelybone.github.io/base64-blob/
+http://github.com/livelybone/base64-blob@readme
 
 ## Installation
 ```bash

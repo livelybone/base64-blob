@@ -3,6 +3,7 @@ import path from 'path'
 import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
 import { uglify } from 'rollup-plugin-uglify'
+import license from 'rollup-plugin-license'
 
 const formats = ['es', 'umd']
 
@@ -29,6 +30,13 @@ const conf = entry => ({
     resolve(),
     commonjs(),
     (entry.needUglify !== false && uglify()),
+    license({
+      banner: `Bundle of <%= pkg.name %>
+               Generated: <%= moment().format('YYYY-MM-DD') %>
+               Version: <%= pkg.version %>
+               License: <%= pkg.license %>
+               Author: <%= pkg.author %>`,
+    }),
   ]
 })
 
