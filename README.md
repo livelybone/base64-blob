@@ -2,6 +2,7 @@
 [![NPM Version](http://img.shields.io/npm/v/base64-blob.svg?style=flat-square)](https://www.npmjs.com/package/base64-blob)
 [![Download Month](http://img.shields.io/npm/dm/base64-blob.svg?style=flat-square)](https://www.npmjs.com/package/base64-blob)
 ![gzip with dependencies: .5kb](https://img.shields.io/badge/gzip--with--dependencies-.5kb-brightgreen.svg "gzip with dependencies: .5kb")
+![typescript](https://img.shields.io/badge/typescript-supported-blue.svg "typescript")
 ![pkg.module](https://img.shields.io/badge/pkg.module-supported-blue.svg "pkg.module")
 
 > `pkg.module supported`, which means that you can apply tree-shaking in you project
@@ -26,7 +27,7 @@ npm i -S base64-blob
 
 ## Usage
 ```js
-import {base64ToBlob, blobToBase64} from 'base64-blob'
+import { base64ToBlob, blobToBase64 } from 'base64-blob'
 ```
 
 when you want to set this module as external while you are developing another module, you should import it like this:
@@ -43,9 +44,14 @@ Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/base64-blob
 
 ## Functions
 
+```typescript
+/** Format: /^data:[\w\d]*\/[\d\w]*;base64,.*$/ */
+type DataUrl = string
+```
+
 ### base64ToBlob
-> `(base64: String) => Promise<Blob>`
+> `(base64: DataUrl) => Promise<Blob>`
 
 ### blobToBase64
 
-> `(blob: Blob) => Promise<String>`
+> `(blob: Blob) => Promise<DataUrl>`

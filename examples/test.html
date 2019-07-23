@@ -17,7 +17,7 @@ var module = document.getElementById('module')
 // do something ...
 module.addEventListener('change', function (e) {
   Base64_Blob.blobToBase64(e.target.files[0]).then(function (str) {
-    // console.log(str)
+    console.log(str.slice(0, 100), /^data:[\w\d]*\/[\d\w]*;base64,.*$/.test(str))
     document.getElementById('img').src = str
     Base64_Blob.base64ToBlob(str).then(function (b) {
       console.log(b)

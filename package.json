@@ -1,10 +1,11 @@
 {
   "name": "base64-blob",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A module for interconversion of base64 and blob, wrapped by Promise",
   "main": "./lib/umd/index.js",
   "module": "./lib/es/index.js",
   "unpkg": "./lib/umd/index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "build": "rimraf ./lib && cross-env NODE_ENV=production rollup -c",
     "eslint": "eslint ./src",
