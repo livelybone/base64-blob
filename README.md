@@ -46,12 +46,12 @@ Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/base64-blob
 
 ```typescript
 /** Format: /^data:[\w\d]*\/[\d\w]*;base64,.*$/ */
-type DataUrl = string
+type Base64Url = string
 ```
 
 ### base64ToBlob
-> `(base64: DataUrl) => Promise<Blob>`
+> `(base64: Base64Url) => Promise<Blob>`
 
 ### blobToBase64
 
-> `(blob: Blob) => Promise<DataUrl>`
+> `(blob: Blob) => Promise<Base64Url>`
